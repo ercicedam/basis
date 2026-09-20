@@ -12,6 +12,13 @@ curl -L -o inputs/LC08_L1GT_008113_20241214_20241214_02_RT_B8_image.tif \
     https://github.com/ercicedam/basis/releases/download/v0.1.0/LC08_L1GT_008113_20241214_20241214_02_RT_B8_image.tif
 ```
 
+> **Note:** this repository is currently private, so the plain `curl`
+> command above only works once you're authenticated. Until it's made
+> public, use the GitHub CLI instead:
+> ```bash
+> gh release download v0.1.0 --repo ercicedam/basis --pattern "LC08_*" -O inputs/LC08_L1GT_008113_20241214_20241214_02_RT_B8_image.tif
+> ```
+
 Then, from the repository root:
 
 ```bash

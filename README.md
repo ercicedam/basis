@@ -48,7 +48,7 @@ curl -L -o inputs/LC08_L1GT_008113_20241214_20241214_02_RT_B8_image.tif \
     https://github.com/ercicedam/basis/releases/download/v0.1.0/LC08_L1GT_008113_20241214_20241214_02_RT_B8_image.tif
 ```
 
-See `weights/README.md` and `inputs/README.md` for details.
+This repository is currently **private**, so the `curl` commands above only work once authenticated. Until it's made public, use the GitHub CLI instead: `gh release download v0.1.0 --repo ercicedam/basis`. See `weights/README.md` and `inputs/README.md` for details.
 
 ## Usage
 

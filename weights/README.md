@@ -9,6 +9,16 @@ curl -L -o weights/BASIS.weights.h5 \
     https://github.com/ercicedam/basis/releases/download/v0.1.0/BASIS.weights.h5
 ```
 
+> **Note:** this repository is currently private, so the plain `curl`
+> command above only works for accounts with access, and only after
+> authenticating (e.g. `curl` with a GitHub token, or a browser session
+> that's logged in). Until the repo is made public, the reliable way to
+> fetch this file is with an authenticated GitHub CLI:
+> ```bash
+> gh release download v0.1.0 --repo ercicedam/basis --pattern "BASIS.weights.h5" -O weights/BASIS.weights.h5
+> ```
+> Once the repository is public, the plain `curl` command works for anyone.
+
 This file is loaded with `Model.load_weights(...)`, so it only contains
 weight values, not the architecture — the architecture is defined in
 `src/basis/model.py` and must match how the weights were trained.
