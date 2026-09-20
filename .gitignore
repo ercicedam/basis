@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Large binaries are published as GitHub Release assets instead of being
+# committed to git — see weights/README.md and inputs/README.md.
+weights/*.h5
+inputs/*.tif
+
+# Generated output masks
+outputs/*
+!outputs/.gitkeep
+
+.DS_Store

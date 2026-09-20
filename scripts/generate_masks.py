@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+"""Thin wrapper so `python scripts/generate_masks.py ...` works without
+installing the package (e.g. `pip install -e .`) first."""
+import os
+import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
+
+from basis.cli import main  # noqa: E402
+
+if __name__ == "__main__":
+    sys.exit(main())
