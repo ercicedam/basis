@@ -1,6 +1,6 @@
 # BASIS — BAsal and Surface Ice-shelf fracture extraction System
 
-BASIS is a lightweight, inference-only release of a deep learning model that segments crevasses/fractures in optical satellite imagery of glaciers and ice shelves. It is a companion to our paper (see [Citation](#citation)) and lets you generate fracture masks from your own optical rasters using the trained model, without the full training pipeline, data-curation scripts, or multi-environment setup of the [research repository](#relationship-to-the-full-repository).
+BASIS is a lightweight, inference-only release of a deep learning model that segments crevasses/fractures in optical satellite imagery of glaciers and ice shelves. It is a companion to our paper (see [README](#README)) and lets you generate fracture masks from your own optical rasters using the trained model, without the full training pipeline, data-curation scripts, or multi-environment setup of the [research repository](#relationship-to-the-full-repository).
 
 The model is a DeepLabv3+-style architecture (ASPP decoder on a ResNet-50 encoder) adapted from [this DeepLabv3 walkthrough](https://medium.com/@itberrios6/deeplabv3-c0c8c93d25a4). It was developed as part of the IceDaM project, funded by the European Research Council.
 
@@ -74,10 +74,6 @@ Each input `<name>.tif` produces `outputs/<name>_mask.tif`, a single-band GeoTIF
 
 | Flag             | Default | Meaning                                                        |
 |------------------|---------|-----------------------------------------------------------------|
-| `--patch-size`   | 512     | Sliding-window patch size; must match the weights.               |
-| `--n-classes`    | 3       | Number of output classes; must match the weights.                |
-| `--n-features`   | 1       | Number of input bands (1 = panchromatic); must match the weights. |
-| `--kernel-size`  | 1       | ASPP convolution kernel size; must match the weights.             |
 | `--batch-size`   | 8       | Patches per prediction batch (lower if you hit an OOM error).     |
 | `--cpu`          | off     | Force CPU inference even if a GPU is visible.                    |
 
