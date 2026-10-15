@@ -38,17 +38,17 @@ GPU inference needs a CUDA/cuDNN setup matching your driver; see the [TensorFlow
 
 ## Getting the weights and sample data
 
-The weights file and the sample input raster are too large for git (9.5 MB and 312 MB) and are published as [GitHub Release v0.1.0](https://github.com/ercicedam/basis/releases/tag/v0.1.0) assets instead of being committed:
+The weights file and the sample input raster are too large for git (9.5 MB and 312 MB) and are published as [GitHub Release v0.2.0](https://github.com/ercicedam/basis/releases/tag/v0.2.0) assets instead of being committed:
 
 ```bash
 curl -L -o weights/BASIS.weights.h5 \
-    https://github.com/ercicedam/basis/releases/download/v0.1.0/BASIS.weights.h5
+    https://github.com/ercicedam/basis/releases/download/v0.2.0/BASIS.weights.h5
 
 curl -L -o inputs/LC08_L1GT_008113_20241214_20241214_02_RT_B8_image.tif \
-    https://github.com/ercicedam/basis/releases/download/v0.1.0/LC08_L1GT_008113_20241214_20241214_02_RT_B8_image.tif
+    https://github.com/ercicedam/basis/releases/download/v0.2.0/LC08_L1GT_008113_20241214_20241214_02_RT_B8_image.tif
 ```
 
-This repository is currently **private**, so the `curl` commands above only work once authenticated. Until it's made public, use the GitHub CLI instead: `gh release download v0.1.0 --repo ercicedam/basis`. See `weights/README.md` and `inputs/README.md` for details.
+Alternatively, with the GitHub CLI: `gh release download v0.2.0 --repo ercicedam/basis`. See `weights/README.md` and `inputs/README.md` for details.
 
 ## Usage
 
